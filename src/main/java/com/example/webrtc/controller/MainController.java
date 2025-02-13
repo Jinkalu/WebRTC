@@ -1,4 +1,4 @@
-package com.example.webrtc;
+package com.example.webrtc.controller;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

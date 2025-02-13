@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css" />
+</head>
+<body>
+<div id="loginContainer">
+    <h2>Enter Your Name</h2>
+    <input type="text" id="username" placeholder="Enter your name">
+    <button id="loginBtn" onclick="login()">Join Chat</button>
+</div>
+
+<script>
+    function login() {
+        let username = document.getElementById("username").value;
+        if (!username) {
+            alert("Please enter your name");
+            return;
+        }
+        localStorage.setItem("username", username);
+        window.location.href = "/chat";
+    }
+</script>
+</body>
+</html>

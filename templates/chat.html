@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css" />
+</head>
+<body>
+
+<h2 id="chatHeader">Select a User to Chat</h2>
+<div id="incomingCallAlert" style="display: none;">
+    <p id="incomingCallText"></p>
+    <button id="answerBtn">Answer</button>
+    <button id="rejectBtn">Reject</button>
+</div>
+
+<div id="chatContainer">
+    <div id="messageList"></div>
+
+    <div id="messageInputContainer">
+        <input type="text" id="messageInput" placeholder="Type a message...">
+        <button id="sendMessageBtn">Send</button>
+    </div>
+</div>
+
+<h3>Online Users</h3>
+<ul id="userList"></ul>
+
+<script th:src="@{chat.js}"></script>
+</body>
+</html>

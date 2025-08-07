@@ -120,9 +120,6 @@ public class MainController02 {
     }
 
 
-
-
-
     @MessageMapping("/candidate")
     public void Candidate(String candidate){
         System.out.println("Candidate came");
